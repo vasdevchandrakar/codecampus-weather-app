@@ -12,12 +12,17 @@ const publicDirPath = path.join(__dirname,'../public');
 app.use(express.static(publicDirPath));
 
 app.get('/', (req,res) => {
-    res.send("<h1>Hello Express</h1>");
+    res.send("<h1>Hello Express New Page here.</h1>");
 });
 
 app.get('/help', (req,res) => {
     res.send("Help Page Content");
 });
+
+app.get('/career', (req,res) => {
+    res.send("This is career page.");
+});
+
 
 app.get('/contact', (req,res) => {
     res.send("Contact Page Content");
